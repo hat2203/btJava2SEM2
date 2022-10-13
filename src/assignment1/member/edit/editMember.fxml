@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="256.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Member">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Text>
+      <TextField layoutX="188.0" layoutY="108.0" prefHeight="31.0" prefWidth="244.0" />
+      <TextField layoutX="188.0" layoutY="169.0" prefHeight="31.0" prefWidth="244.0" />
+      <TextField layoutX="188.0" layoutY="229.0" prefHeight="31.0" prefWidth="244.0" />
+      <TextField layoutX="190.0" layoutY="288.0" prefHeight="31.0" prefWidth="244.0" />
+      <Text layoutX="99.0" layoutY="129.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+      <Text layoutX="99.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+      <Text layoutX="99.0" layoutY="251.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="99.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone" />
+      <Text fill="RED" layoutX="99.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="&lt;&lt;" />
+      <Button layoutX="466.0" layoutY="289.0" mnemonicParsing="false" text="Submit" />
+   </children>
+</Pane>

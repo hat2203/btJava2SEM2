@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="assignment1.member.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="229.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member List">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Text>
+      <Button onAction="#gtHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="&lt;&lt;back to home" />
+      <ListView fx:id="memberList" layoutX="22.0" layoutY="100.0" prefHeight="232.0" prefWidth="561.0" />
+      <Button onAction="#editMember" layoutX="518.0" layoutY="346.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="Edit" />
+      <Button onAction="#moreMember" layoutX="431.0" layoutY="346.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="More" />
+   </children>
+</Pane>

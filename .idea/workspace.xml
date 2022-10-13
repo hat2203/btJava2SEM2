@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f2b08d97-d199-41d7-9be0-59e40387debf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/demoJavaII.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/book/BookList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/book/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/book/edit/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/book/more/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/borrowBook/BorrowList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/borrowBook/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/borrowBook/edit/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/borrowBook/more/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/member/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/member/MemberList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/member/edit/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assignment1/member/more/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/session1/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/session1/Student.java" afterDir="false" />
-    </list>
+    <list default="true" id="f2b08d97-d199-41d7-9be0-59e40387debf" name="Changes" comment="btvn1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,14 +26,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/aptechSEM2/IdeaProjects/demojava&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/aptechSEM2/IdeaProjects/demojava",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.assignment1.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="session1.Main" />
@@ -103,8 +80,23 @@
       <workItem from="1665489950247" duration="4161000" />
       <workItem from="1665496344108" duration="848000" />
       <workItem from="1665542925080" duration="10056000" />
-      <workItem from="1665650787468" duration="3330000" />
+      <workItem from="1665650787468" duration="3629000" />
     </task>
+    <task id="LOCAL-00001" summary="btvn1">
+      <created>1665654267305</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1665654267305</updated>
+    </task>
+    <task id="LOCAL-00002" summary="btvn1">
+      <created>1665654303702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665654303702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,5 +112,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="btvn1" />
+    <option name="LAST_COMMIT_MESSAGE" value="btvn1" />
   </component>
 </project>

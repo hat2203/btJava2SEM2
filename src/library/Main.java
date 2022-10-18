@@ -1,4 +1,4 @@
-package assignment1;
+package library;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         rootStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("trangChu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
         primaryStage.setTitle("Home");
         primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();

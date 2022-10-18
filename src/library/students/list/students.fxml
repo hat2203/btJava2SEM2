@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="library.students.list.StudentListController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button onAction="#gotoHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="&lt;&lt;" />
+      <Button layoutX="506.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="New" />
+      <TableView fx:id="tbStudents" layoutX="25.0" layoutY="86.0" prefHeight="298.0" prefWidth="550.0">
+        <columns>
+          <TableColumn fx:id="sId" prefWidth="68.0" text="SId" />
+          <TableColumn fx:id="sName" prefWidth="160.0" text="SName" />
+            <TableColumn fx:id="sEmail" prefWidth="125.0" text="SEmail" />
+            <TableColumn fx:id="sTel" prefWidth="111.0" text="STel" />
+            <TableColumn prefWidth="85.0" text="Action" />
+        </columns>
+      </TableView>
+      <Text layoutX="253.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>

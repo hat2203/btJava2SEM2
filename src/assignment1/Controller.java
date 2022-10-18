@@ -5,12 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 
+
 public class Controller {
 
 
 
     public void gtBook(ActionEvent actionEvent) throws Exception {
-        Parent formPage = FXMLLoader.load(getClass().getResource("../book/bookList.fxml"));
+        Parent formPage = FXMLLoader.load(getClass().getResource("book/bookList.fxml"));
         Scene formScene = new Scene(formPage,800,600);
         Main.rootStage.setTitle("Books");
         Main.rootStage.setScene(formScene);

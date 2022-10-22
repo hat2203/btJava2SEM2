@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="library.students.create.CreateController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button onAction="#btList" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="&lt;&lt;" />
+      <Text layoutX="187.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create a new student">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nsName" layoutX="184.0" layoutY="110.0" prefHeight="31.0" prefWidth="231.0" promptText="Name...." />
+      <TextField fx:id="nsEmail" layoutX="185.0" layoutY="169.0" prefHeight="31.0" prefWidth="231.0" promptText="Email..." />
+      <TextField fx:id="nsTel" layoutX="184.0" layoutY="231.0" prefHeight="31.0" prefWidth="231.0" promptText="Tel..." />
+      <Button onAction="#submit" layoutX="351.0" layoutY="301.0" mnemonicParsing="false" text="Submit" />
+   </children>
+</Pane>

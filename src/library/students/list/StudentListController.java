@@ -3,11 +3,18 @@ package library.students.list;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import library.Main;
+import library.dao.impls.StudentRepository;
+import library.entities.Book;
 import library.entities.Students;
+import library.helper.Connector;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -23,40 +30,32 @@ public class StudentListController implements Initializable {
     public TableColumn<Students, String> sEmail;
     public TableColumn<Students, String> sTel;
 
-    public static String connectionString = "jdbc:mysql://localhost:3306/t2203ejava";
-    public final static String user = "root";
-    public final static String pwd = "";
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        sId.setCellValueFactory(new PropertyValueFactory<Students, Integer>("SId"));
-        sName.setCellValueFactory(new PropertyValueFactory<Students, String>("SName"));
-        sEmail.setCellValueFactory(new PropertyValueFactory<Students, String>("SEmail"));
-        sTel.setCellValueFactory(new PropertyValueFactory<Students, String>("STel"));
+        sId.setCellValueFactory(new PropertyValueFactory<Students, Integer>("id"));
+        sName.setCellValueFactory(new PropertyValueFactory<Students, String>("name"));
+        sEmail.setCellValueFactory(new PropertyValueFactory<Students, String>("email"));
+        sTel.setCellValueFactory(new PropertyValueFactory<Students, String>("tel"));
 
         ObservableList<Students> slist = FXCollections.observableArrayList();
 
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection con = DriverManager.getConnection(connectionString,user,pwd);
-            Statement statement = con.createStatement();
-            String sql_txt = "select * from students";
-            ResultSet rs = statement.executeQuery(sql_txt);
-            while (rs.next()){
-                int id = rs.getInt("SId");
-                String name = rs.getString("SName");
-                String email = rs.getString("SEmail");
-                String tel = rs.getString("STel");
-                Students s = new Students(id,name,email,tel);
-                slist.add(s);
-            }
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }finally {
-            tbStudents.setItems(slist);
-        }
+        StudentRepository srp = new StudentRepository();
+        slist.addAll(srp.all());
+        tbStudents.setItems(slist);
+
     }
 
-    public void gotoHome(ActionEvent actionEvent) {
+    public void gotoHome(ActionEvent actionEvent) throws Exception {
+        Parent listBook = FXMLLoader.load(getClass().getResource("../../home.fxml"));
+        Main.rootStage.setTitle("Home");
+        Main.rootStage.setScene(new Scene(listBook,800,600));
+
+    }
+
+    public void createStudent(ActionEvent actionEvent) throws Exception {
+        Parent listBook = FXMLLoader.load(getClass().getResource("../create/createStudent.fxml"));
+        library.Main.rootStage.setTitle("Student");
+        library.Main.rootStage.setScene(new Scene(listBook,800,600));
     }
 }

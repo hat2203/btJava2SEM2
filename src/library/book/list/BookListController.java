@@ -1,6 +1,5 @@
 package library.book.list;
 
-import assignment1.Main;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,10 +7,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import library.Main;
+import library.dao.impls.BookRepository;
 import library.entities.Book;
+import library.helper.Connector;
 
 import java.net.URL;
 import java.sql.*;
@@ -24,9 +27,8 @@ public class BookListController implements Initializable {
     public TableColumn<Book, String> bName;
     public TableColumn<Book, String> bAuthor;
     public TableColumn<Book, Integer> bQty;
-    public static String connectionString = "jdbc:mysql://localhost:3306/t2203ejava";
-    public final static String user = "root";
-    public final static String pwd = "";
+    public  TableColumn<Book, Button> bEdit;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -34,34 +36,25 @@ public class BookListController implements Initializable {
         bName.setCellValueFactory(new PropertyValueFactory<Book, String>("name"));
         bAuthor.setCellValueFactory(new PropertyValueFactory<Book, String>("author"));
         bQty.setCellValueFactory(new PropertyValueFactory<Book, Integer>("qty"));
+        bEdit.setCellValueFactory(new PropertyValueFactory<Book, Button>("edit"));
 
         ObservableList<Book> ls = FXCollections.observableArrayList();
-//        ls.add(new Book(1,"Trí tuệ Do Thái","ABC",12));
-//        ls.add(new Book(2,"Dế mèn phiêu lưu kí","Tô Hoài",10));
-//         lấy dữ liệu data
 
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection(connectionString,user,pwd);
-            Statement statement = conn.createStatement();
-            String sql_txt = "select * from books";
-            ResultSet rs = statement.executeQuery(sql_txt);
-            while (rs.next()){
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                String author = rs.getString("author");
-                int qty = rs.getInt("qty");
-                Book b = new Book(id,name,author,qty);
-                ls.add(b);
-            }
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }finally {
-            tbBook.setItems(ls);
-        }
+        BookRepository rp = new BookRepository();
+        ls.addAll(rp.all());
+        tbBook.setItems(ls);
+
     }
 
     public void gotoHome(ActionEvent actionEvent) throws Exception {
+        Parent listBook = FXMLLoader.load(getClass().getResource("../../home.fxml"));
+        Main.rootStage.setTitle("Home");
+        Main.rootStage.setScene(new Scene(listBook,800,600));
+    }
 
+    public void createBook(ActionEvent actionEvent) throws Exception {
+        Parent listBook = FXMLLoader.load(getClass().getResource("../create/createBook.fxml"));
+        library.Main.rootStage.setTitle("Books");
+        Main.rootStage.setScene(new Scene(listBook,800,600));
     }
 }

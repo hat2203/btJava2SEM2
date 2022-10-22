@@ -9,7 +9,7 @@
 <Pane fx:controller="library.students.list.StudentListController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button onAction="#gotoHome" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="&lt;&lt;" />
-      <Button layoutX="506.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="New" />
+      <Button onAction="#createStudent" layoutX="506.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="New" />
       <TableView fx:id="tbStudents" layoutX="25.0" layoutY="86.0" prefHeight="298.0" prefWidth="550.0">
         <columns>
           <TableColumn fx:id="sId" prefWidth="68.0" text="SId" />

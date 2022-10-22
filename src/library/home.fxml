@@ -9,6 +9,6 @@
    <children>
       <Button onAction="#gtBooks" layoutX="96.0" layoutY="194.0" mnemonicParsing="false" text="Books" />
       <Button onAction="#gotoStudents" layoutX="251.0" layoutY="194.0" mnemonicParsing="false" text="Students" />
-      <Button layoutX="442.0" layoutY="194.0" mnemonicParsing="false" text="Button" />
+      <Button onAction="#gotoRents" layoutX="442.0" layoutY="194.0" mnemonicParsing="false" text="Rents" />
    </children>
 </Pane>

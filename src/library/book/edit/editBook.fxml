@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.book.edit.EditBookController">
+   <children>
+      <Text layoutX="201.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit book">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="ebName" layoutX="176.0" layoutY="100.0" prefHeight="40.0" prefWidth="231.0" promptText="Book name..." />
+      <TextField fx:id="ebAuthor" layoutX="176.0" layoutY="160.0" prefHeight="40.0" prefWidth="231.0" promptText="Author" />
+      <TextField fx:id="ebQty" layoutX="176.0" layoutY="225.0" prefHeight="40.0" prefWidth="231.0" promptText="Quantity" />
+      <Button layoutX="342.0" layoutY="307.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Button layoutX="176.0" layoutY="307.0" mnemonicParsing="false" onAction="#delete" text="Delete" />
+      <Button layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#gtBack" prefHeight="31.0" prefWidth="65.0" text="&lt;&lt;" />
+      <Text fill="RED" layoutX="176.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" visible="false" />
+   </children>
+</Pane>

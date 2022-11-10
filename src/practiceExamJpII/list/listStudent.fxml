@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="practiceExamJpII.list.ListStudentController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="230.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Students list">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tbStudent" layoutX="18.0" layoutY="78.0" prefHeight="269.0" prefWidth="567.0">
+        <columns>
+          <TableColumn fx:id="sId"  prefWidth="85.0" text="Student ID" />
+          <TableColumn fx:id="sName" prefWidth="209.0" text="Student Name" />
+            <TableColumn fx:id="sAddress" prefWidth="121.0" text="Address" />
+            <TableColumn fx:id="sPhone" prefWidth="150.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Button onAction="#gtHome" layoutX="18.0" layoutY="14.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="65.0" text="Back" />
+      <Button onAction="#crStudent" layoutX="480.0" layoutY="355.0" mnemonicParsing="false" text="New student" />
+   </children>
+</Pane>

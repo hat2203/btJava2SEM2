@@ -12,6 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import library.Main;
 import practiceExamJpII.Students;
+import practiceExamJpII.creat.CreateStudentController;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,14 +24,14 @@ public class ListStudentController implements Initializable {
     public TableColumn<Students, String> sAddress;
     public TableColumn<Students, String> sPhone;
 
-    ObservableList<Students> list = FXCollections.observableArrayList();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         sId.setCellValueFactory(new PropertyValueFactory<>("id"));
         sName.setCellValueFactory(new PropertyValueFactory<>("name"));
         sAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
         sPhone.setCellValueFactory(new PropertyValueFactory<>("phone"));
-         tbStudent.setItems(list);
+         tbStudent.setItems(CreateStudentController.list);
     }
 
     public void gtHome(ActionEvent actionEvent) throws Exception {

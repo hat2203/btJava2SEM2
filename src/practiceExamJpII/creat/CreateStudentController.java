@@ -19,7 +19,7 @@ public class CreateStudentController {
     public TextField crSphone;
     public Text check;
 
-    ObservableList<Students> list = FXCollections.observableArrayList();
+   public static ObservableList<Students> list = FXCollections.observableArrayList();
     public void createS(ActionEvent actionEvent) {
         try{
           check.setVisible(false);
